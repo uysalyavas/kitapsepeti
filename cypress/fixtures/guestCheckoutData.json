@@ -1,0 +1,20 @@
+{
+  "productName": "Gece Yarısı Kütüphanesi",
+  "guestInfo": {
+    "fullName": "Ayşe Akın",
+    "email": "test61@gmail.com",
+    "phone": "05304260000",
+    "province": "Tekirdağ",
+    "district": "Saray",
+    "neighborhood": "Güngörmez Mahallesi",
+    "address": "dgfhghjj bvgnhbnk fdhgkjk zfdghhj vbnjukgfgdgfj"
+  },
+  
+  "messages": {
+    "requiredField": "Lütfen bu alanı doldurunuz."
+  },
+  "titles": {
+    "addressForm": "Adres Bilgileri"
+  }
+  
+}

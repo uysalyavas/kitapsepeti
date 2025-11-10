@@ -1,0 +1,12 @@
+{
+  "productName": "Kürk Mantolu Madonna",
+  "cartPage": {
+    "emptyMessage": "Sepetinizde ürün bulunmamaktadır.",
+    "continueButton": "Alışverişe Devam Et",
+    "buyButton": "Satın Al"
+  },
+  "prices": {
+    "shippingFee": "59,90 TL"
+    
+  }
+}
