@@ -21,7 +21,7 @@ class PaymentPage {
 
   clickBuyNow() {
     cy.wait(1000);
-    cy.get('#header-cart-panel-322')
+    cy.get('#header-cart-panel-302')
     .should('be.visible')
     .and('have.css', 'visibility', 'visible'); // panel gerçekten görünür olmalı
 
