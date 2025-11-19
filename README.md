@@ -10,7 +10,7 @@ PROJE ÖZETİ
 - Sepet Yönetimi ve Kontrolü
 - Ödeme ve Sipariş Onayı
 - Misafir Olarak Satın Alma Akışı
-
+Tekrarlanan adımların kod tekrarını önlemek ve bakımı kolaylaştırmak için test dosyalarında Mocha Hooks (beforeEach) metodu etkin olarak kullanılmıştır.
 
 PROJE KLASÖRÜ YAPISI
 
