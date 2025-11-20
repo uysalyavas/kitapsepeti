@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-20T03:44:11.051Z",
+    "end": "2025-11-20T03:44:39.168Z",
+    "duration": 28117,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e9ba4f9-fc27-4023-bb30-ab3288f0b76f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\payment.cy.js",
+      "file": "cypress\\e2e\\payment.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d91f18cf-e2a5-4105-a6bc-d1e9182658f3",
+          "title": "User Story 05 - Ödeme ve Sipariş Onayı",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "AC1 - Satın Al butonuna tıklanınca Adres Bilgileri sayfasına yönlendirilmeli",
+              "fullTitle": "User Story 05 - Ödeme ve Sipariş Onayı AC1 - Satın Al butonuna tıklanınca Adres Bilgileri sayfasına yönlendirilmeli",
+              "timedOut": null,
+              "duration": 27937,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_paymentPage.default.clickBuyNow();\ncy.wait(10000); // yönlendirmeye zaman tanı\n_paymentPage.default.verifyAddressPage();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: Expected to find element: `#header-cart-panel-302`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story 05 - Ödeme ve Si...`",
+                "estack": "AssertionError: Timed out retrying after 15000ms: Expected to find element: `#header-cart-panel-302`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story 05 - Ödeme ve Si...`\n    at cartPage.openCart (webpack://kitap_sepeti/./cypress/e2e/page/cartPage.js:23:34)\n    at Context.eval (webpack://kitap_sepeti/./cypress/e2e/payment.cy.js:30:13)",
+                "diff": null
+              },
+              "uuid": "34d88a6b-e3d4-4b94-be4a-d0612b265844",
+              "parentUUID": "d91f18cf-e2a5-4105-a6bc-d1e9182658f3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "34d88a6b-e3d4-4b94-be4a-d0612b265844"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 27937,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

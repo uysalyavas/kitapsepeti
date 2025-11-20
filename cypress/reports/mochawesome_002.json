@@ -1,0 +1,243 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-20T03:43:48.868Z",
+    "end": "2025-11-20T03:44:08.334Z",
+    "duration": 19466,
+    "testsRegistered": 8,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 7,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "c76fa108-d3f7-4c5a-9bc1-b887792a8204",
+      "title": "",
+      "fullFile": "cypress\\e2e\\login.cy.js",
+      "file": "cypress\\e2e\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+          "title": "User Story 01 - Kullanıcı Girişi",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01 - AC1: Giriş popup erişimi",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC01 - AC1: Giriş popup erişimi",
+              "timedOut": null,
+              "duration": 19283,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.elements.emailField().should('exist').and('be.visible');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 15000ms: expected '<input#header-email.form-control.form-control-md>' to be 'visible'\n\nThis element `<input#header-email.form-control.form-control-md>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"ccp---nb-interstitial-overlay\">...</div>`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story 01 - Kullanıcı G...`",
+                "estack": "AssertionError: Timed out retrying after 15000ms: expected '<input#header-email.form-control.form-control-md>' to be 'visible'\n\nThis element `<input#header-email.form-control.form-control-md>` is not visible because it has CSS property: `position: fixed` and it's being covered by another element:\n\n`<div class=\"ccp---nb-interstitial-overlay\">...</div>`\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story 01 - Kullanıcı G...`\n    at LoginPage.clickLoginButton (webpack://kitap_sepeti/./cypress/e2e/page/loginPage.js:28:31)\n    at Context.eval (webpack://kitap_sepeti/./cypress/e2e/login.cy.js:10:14)",
+                "diff": null
+              },
+              "uuid": "e99ca265-e177-415b-b8ce-0213b8325006",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC02 - AC2: Giriş popup alanları görünmeli",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC02 - AC2: Giriş popup alanları görünmeli",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.elements.emailField().should('exist');\n_loginPage.default.elements.passwordField().should('exist');\n_loginPage.default.elements.rememberMeCheckbox().should('exist');\n_loginPage.default.elements.forgotPasswordLink().should('exist');\n_loginPage.default.elements.submitButton().should('exist');",
+              "err": {},
+              "uuid": "dc0bcde2-8464-4bce-b436-9fe45bc04975",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC03 - AC3/AC4: Geçerli kullanıcı ile başarılı giriş",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC03 - AC3/AC4: Geçerli kullanıcı ile başarılı giriş",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('loginData').then(data => {\n  _loginPage.default.enterEmail(data.validUser.email);\n  _loginPage.default.enterPassword(data.validUser.password);\n  _loginPage.default.submitLogin();\n  // Başarılı giriş sonrası yönlendirme doğrulaması\n  cy.url({\n    timeout: 10000\n  }).should('include', '/');\n  cy.contains('Başarıyla giriş yaptınız.', {\n    matchCase: false\n  }).should('exist');\n});",
+              "err": {},
+              "uuid": "9d2d36c7-1904-4509-89fb-00f6388be7bc",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC05 - AC5: Hatalı bilgilerle giriş başarısız olmalı",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC05 - AC5: Hatalı bilgilerle giriş başarısız olmalı",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('loginData').then(data => {\n  _loginPage.default.enterEmail(data.invalidUser.email);\n  _loginPage.default.enterPassword(data.invalidUser.password);\n  _loginPage.default.submitLogin();\n  _loginPage.default.verifyErrorMessage('Giriş bilgileriniz hatalı');\n});",
+              "err": {},
+              "uuid": "2da2cfec-7551-42c8-816d-165ab0d821c8",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC06 - AC6: Geçersiz e-posta formatı uyarısı",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC06 - AC6: Geçersiz e-posta formatı uyarısı",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.enterEmail('userexample.com');\n_loginPage.default.enterPassword('123456');\n_loginPage.default.submitLogin();\ncy.contains('Giriş bilgileriniz hatalı.').should('exist');",
+              "err": {},
+              "uuid": "5000a4e9-5241-4902-ad8b-c39433744d7f",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC07 - AC7: Boş alanlarla giriş yapılamaz",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC07 - AC7: Boş alanlarla giriş yapılamaz",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.submitLogin();\ncy.contains('Giriş bilgileriniz hatalı.').should('exist');",
+              "err": {},
+              "uuid": "fc16a30c-02d6-458b-9b89-ffd44c39bf71",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC08 - AC8: Çok fazla hatalı deneme sonrası uyarı",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC08 - AC8: Çok fazla hatalı deneme sonrası uyarı",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "for (let i = 0; i < 11; i++) {\n  _loginPage.default.enterEmail(_loginData.default.invalidUser.email);\n  _loginPage.default.enterPassword(_loginData.default.invalidUser.password);\n  _loginPage.default.submitLogin();\n}\n_loginPage.default.verifyExcessiveLoginAttemptMessage();",
+              "err": {},
+              "uuid": "eabdf46c-2922-4c36-b3a9-a2eacc9b6023",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "TC09 - AC9: Şifremi unuttum sayfasına yönlendirme",
+              "fullTitle": "User Story 01 - Kullanıcı Girişi TC09 - AC9: Şifremi unuttum sayfasına yönlendirme",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_loginPage.default.elements.forgotPasswordLink().click();\ncy.url().should('include', '/uye-sifre-hatirlat');\ncy.get('#email-292').should('be.visible');\ncy.get('#forgot-password-btn-292').should('exist').click();",
+              "err": {},
+              "uuid": "dd71bc2e-278e-42db-9d66-9272870394de",
+              "parentUUID": "a21ad661-6f2d-45b8-8c49-37a2aa15811a",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "e99ca265-e177-415b-b8ce-0213b8325006"
+          ],
+          "pending": [],
+          "skipped": [
+            "dc0bcde2-8464-4bce-b436-9fe45bc04975",
+            "9d2d36c7-1904-4509-89fb-00f6388be7bc",
+            "2da2cfec-7551-42c8-816d-165ab0d821c8",
+            "5000a4e9-5241-4902-ad8b-c39433744d7f",
+            "fc16a30c-02d6-458b-9b89-ffd44c39bf71",
+            "eabdf46c-2922-4c36-b3a9-a2eacc9b6023",
+            "dd71bc2e-278e-42db-9d66-9272870394de"
+          ],
+          "duration": 19283,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

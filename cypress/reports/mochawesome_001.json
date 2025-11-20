@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-11-20T03:43:26.318Z",
+    "end": "2025-11-20T03:43:46.215Z",
+    "duration": 19897,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "fa43c28d-7bc0-4e8d-9a11-a7d78efbaa01",
+      "title": "",
+      "fullFile": "cypress\\e2e\\guestCheckout.cy.js",
+      "file": "cypress\\e2e\\guestCheckout.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "603b5b92-a32c-44ec-9da2-de6e24b53463",
+          "title": "User Story - 06 - Misafir Olarak Satın Alma Akışı",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "TC01-AC1,AC2,AC3,AC4,AC5 - Zorunlu alan boş bırakıldığında uyarı görünmeli",
+              "fullTitle": "User Story - 06 - Misafir Olarak Satın Alma Akışı TC01-AC1,AC2,AC3,AC4,AC5 - Zorunlu alan boş bırakıldığında uyarı görünmeli",
+              "timedOut": null,
+              "duration": 19726,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_guestCheckoutPage.default.fillAddressForm({});\n_guestCheckoutPage.default.elements.saveAddressBtn().click({\n  force: true\n});\n_guestCheckoutPage.default.elements.validationMessage().should('contain.text', 'Lütfen bu alanı doldurunuz');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 15050ms: `cy.click()` failed because this element:\n\n`<button type=\"submit\" class=\"btn btn-primary\" id=\"live-search-btn\">Ara</button>`\n\nis being covered by another element:\n\n`<div class=\"ccp---nb-interstitial-overlay\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story - 06 - Misafir O...`",
+                "estack": "CypressError: Timed out retrying after 15050ms: `cy.click()` failed because this element:\n\n`<button type=\"submit\" class=\"btn btn-primary\" id=\"live-search-btn\">Ara</button>`\n\nis being covered by another element:\n\n`<div class=\"ccp---nb-interstitial-overlay\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `User Story - 06 - Misafir O...`\n    at ensureIsDescendent (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:114621:68)\n    at ensureDescendents (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:114672:5)\n    at ensureDescendentsAndScroll (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:114678:14)\n    at ensureElIsNotCovered (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:114809:5)\n    at runAllChecks (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:115008:52)\n    at retryActionability (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:115045:16)\n    at tryCatcher (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:151252:68)\n    at <unknown> (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:151193:14)\n    at tryCatcher (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://www.kitapsepeti.com/__cypress/runner/cypress_runner.js:5420:46)\nFrom Your Spec Code:\n    at SearchPage.searchProduct (webpack://kitap_sepeti/./cypress/e2e/page/searchPage.js:19:33)\n    at Context.eval (webpack://kitap_sepeti/./cypress/e2e/guestCheckout.cy.js:11:17)",
+                "diff": null
+              },
+              "uuid": "edaf33df-275e-4d1b-8891-3a6cedf4e3fb",
+              "parentUUID": "603b5b92-a32c-44ec-9da2-de6e24b53463",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "TC02-AC1,AC2,AC3,AC4,AC6 - Tüm bilgiler geçerli girildiğinde ödeme adımına geçilmeli",
+              "fullTitle": "User Story - 06 - Misafir Olarak Satın Alma Akışı TC02-AC1,AC2,AC3,AC4,AC6 - Tüm bilgiler geçerli girildiğinde ödeme adımına geçilmeli",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_guestCheckoutPage.default.fillAddressForm(_guestCheckoutData.default.guestInfo);\n_guestCheckoutPage.default.elements.saveAddressBtn().should('be.visible').click({\n  force: true\n});\ncy.url({\n  timeout: 20000\n}).should('include', '/payment');",
+              "err": {},
+              "uuid": "0f32243d-1016-423e-957e-028452cc3f62",
+              "parentUUID": "603b5b92-a32c-44ec-9da2-de6e24b53463",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "edaf33df-275e-4d1b-8891-3a6cedf4e3fb"
+          ],
+          "pending": [],
+          "skipped": [
+            "0f32243d-1016-423e-957e-028452cc3f62"
+          ],
+          "duration": 19726,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

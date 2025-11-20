@@ -12,4 +12,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
     },
   },
+reporter: "mochawesome",
+reporterOptions: {
+  reportDir: "cypress/reports",
+  overwrite: false,
+  html: false,
+  json: true
+}
 });
